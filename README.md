@@ -1,5 +1,13 @@
 # Ad360 Java Api Client
 
+![Ad360 logo](https://www.ad360.media/images/LOGO_black_horizontal_300px.png)
+Ad360 is a next-generation media buying platform meant to give you a 360 view over your advertising activities. 
+
+Ad360 allows you to control from one place all your Google, Facebook, Amazon and Open Web advertising activities. With advanced data analytics and peformance monitoring tools, you can have a truly omnichannel view of your activities and manage your advertising campaigns more efficiently and effortlessly. 
+
+Plus Ad360 natively includes years of Artificial Intelligence research, and powerful Machine Learning algorithms that automatically increase your advertising results. 
+
+<a href="https://www.ad360.media/">Learn more about Ad360.</a>
 
 ## Introduction
 
@@ -41,6 +49,58 @@ If you wish your organization's Usage Plan to be reviewed at any time, please <a
 
 
 ### Install Java API Client
+
+#### Generate your GitHub PAT
+
+The GitHub PAT (Personal Access Token) is a way to authenticate you and give you access to the Ad360 Java Client. You will need to have a PAT for thenext sub-section.
+To learn how to create a GitHub PAT, please read <a href="https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token">this GitHub documentation page</a>.
+
+#### Add the Ad360 server to your settings.xml file 
+
+In your Maven settings files (usually a files named settings.xml in the hidden folder ~/.m2), you need to add the ad360 profile so that your projects can download the Ad360 dependency.
+If you can't find yoour /.m2 foldeer, here are some tips:
+- Mac: On the top of the screen you can find the Finder. Click Go -> Go to Folder -> search ~/.m2
+- Windows: the folder is located in C:\Users\{your-username}\.m2
+You have to make sure you have Java installed on your machine as well.
+
+Firstly, copy and paste the following text between the <profiles> and </profiles> tags.
+
+```text
+   <profile>
+      <id>my-active-profile</id>
+      <repositories>
+       <repository>
+			<id>github-ad360</id>
+			<name>GitHub Menadex Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/Menadex/Ad360JavaApiClient</url>
+          <snapshots><enabled>true</enabled></snapshots>
+          <releases><enabled>true</enabled></releases>
+        </repository>
+      </repositories>
+    </profile>
+``` 
+
+If you have multiple profiles in your settings.xml, you'll have to make sure this profile is active. To do this, you can paste this text before the opening tag <profiles>:
+
+```text
+  <activeProfiles>
+    <activeProfile>my-active-profile</activeProfile>
+  </activeProfiles> 
+``` 
+Make sure the value set after the <activeProfile> tag (here: "my-active-profile") matches the vaue after the <id> tag in the <profile> section you have just added.
+
+Secondly, you need to add your GitHub crendetials between the <servers> and </servers> tags. Please copy and paste the text below, and change the YOUR_USERNAME value with your GitHub username and the YOUR_PAT value with the PAT you have created (see previous sub-section).
+
+```text
+       <server>
+          <id>github-ad360</id>
+          <username>YOUR_USERNAME</username>
+          <password>YOUR_PAT</password>
+        </server>
+``` 
+
+
+#### Add the Ad360 Maven dependency to your code
 
 To start using Ad360 Java API Client, you first need to create a Maven Java project. You will find below the Maven dependency you need to add to your pom.xml file to run the Ad360 Java API Client:
 
