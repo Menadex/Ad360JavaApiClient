@@ -1,6 +1,6 @@
 # Ad360 Java Api Client
 
-![Ad360 logo](https://www.ad360.media/images/LOGO_black_horizontal_300px.png)
+![Ad360 logo](https://cdn.ad360.media/assets/marketing/logos/ad360/LOGO_black_horizontal_75px.png)
 Ad360 is a next-generation media buying platform meant to give you a 360 view over your advertising activities. 
 
 Ad360 allows you to control from one place all your Google, Facebook, Amazon and Open Web advertising activities. With advanced data analytics and peformance monitoring tools, you can have a truly omnichannel view of your activities and manage your advertising campaigns more efficiently and effortlessly. 
