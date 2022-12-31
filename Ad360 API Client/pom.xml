@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.ad360.api</groupId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0-RELEASE</version>
 	<artifactId>client</artifactId>
 	<name>Ad360 Java Api Client</name>
 	<packaging>jar</packaging>
